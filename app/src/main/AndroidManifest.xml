@@ -37,6 +37,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".CatalogActivity" />
         </activity>
+       <!--
+       links in provider refers to authorities: app name and links it to the corresponding provider
+       field exported set to false as we are not interacting w/another app
+       could I use: .PetContract.BASE_CONTENT_URI ?
+       -->
+        <provider
+            android:authorities="com.example.android.pets"
+            android:name=".data.PetProvider"
+            android:exported="false"/>
     </application>
 
 </manifest>
